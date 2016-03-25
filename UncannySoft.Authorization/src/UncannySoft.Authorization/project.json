@@ -1,0 +1,15 @@
+﻿{
+    "version": "1.0.0-*",
+    "description": "UncannySoft.Authorization Class Library",
+    "authors": [ "magriffey" ],
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
+    "dependencies": {
+        "Microsoft.AspNet.Authorization": "1.0.0-rc1-final"
+    },
+    "frameworks": {
+        "dnx451": { },
+        "dnxcore50": { }
+    }
+}

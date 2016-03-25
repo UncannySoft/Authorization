@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9C40E02E-33DF-4B94-9467-67116E80627C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{09869412-7445-4C33-A809-1A67BED9813B}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "UncannySoft.Authorization", "src\UncannySoft.Authorization\UncannySoft.Authorization.xproj", "{2484F10C-0381-4416-AEFA-35C8486936E9}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "UncannySoft.MvcAuthExample", "src\UncannySoft.MvcAuthExample\UncannySoft.MvcAuthExample.xproj", "{949B764B-4485-497B-A473-9542C3F29ECB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2484F10C-0381-4416-AEFA-35C8486936E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2484F10C-0381-4416-AEFA-35C8486936E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2484F10C-0381-4416-AEFA-35C8486936E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2484F10C-0381-4416-AEFA-35C8486936E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{949B764B-4485-497B-A473-9542C3F29ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{949B764B-4485-497B-A473-9542C3F29ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{949B764B-4485-497B-A473-9542C3F29ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{949B764B-4485-497B-A473-9542C3F29ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2484F10C-0381-4416-AEFA-35C8486936E9} = {9C40E02E-33DF-4B94-9467-67116E80627C}
+		{949B764B-4485-497B-A473-9542C3F29ECB} = {9C40E02E-33DF-4B94-9467-67116E80627C}
+	EndGlobalSection
+EndGlobal
