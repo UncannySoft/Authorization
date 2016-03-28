@@ -10,5 +10,8 @@ namespace UncannySoft.MvcAuthExample.Controllers
 
         [Route("Error")]
         public IActionResult Error() => View();
+
+        [Authorize(Policy = "AdministratorOnly")]
+        public IActionResult Admin() => View();
     }
 }

@@ -28,7 +28,9 @@ namespace UncannySoft.MvcAuthExample
         {
             services.AddAuthorization(options =>
             {
-                
+                options.AddPolicy("AdministratorOnly", policy => policy.RequireRole("Administrator"));
+                options.AddPolicy("EmployeeIdExists", policy => policy.RequireClaim("EmployeeId"));
+                options.AddPolicy("EmployeeIdIn", policy => policy.RequireClaim("EmployeeId", "123", "456"));
             });
             services.AddMvc(config => {
                 var policy = new AuthorizationPolicyBuilder()

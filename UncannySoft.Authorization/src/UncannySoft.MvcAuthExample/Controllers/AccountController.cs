@@ -23,7 +23,7 @@ namespace UncannySoft.MvcAuthExample.Controllers
             const string Issuer = "https://contoso.com";
             List<Claim> claims = new List<Claim> {
                 new Claim(ClaimTypes.Name, "barry", ClaimValueTypes.String, Issuer),
-                new Claim(ClaimTypes.Role, "Administrator", ClaimValueTypes.String, Issuer),
+                new Claim(ClaimTypes.Role, "BasicUser", ClaimValueTypes.String, Issuer),
                 new Claim("EmployeeId", "123", ClaimValueTypes.String, Issuer),
                 new Claim(ClaimTypes.DateOfBirth, "1970-06-08", ClaimValueTypes.Date),
                 new Claim("BadgeNumber", "123456", ClaimValueTypes.String, Issuer),

@@ -27,7 +27,7 @@
                     <li><a asp-controller="Home" asp-action="Index">Home</a></li>
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <li><a asp-controller="Account" asp-action="Index">Secure</a></li>
+                        <li><a asp-controller="Home" asp-action="Admin">Admin</a></li>
                     }
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
