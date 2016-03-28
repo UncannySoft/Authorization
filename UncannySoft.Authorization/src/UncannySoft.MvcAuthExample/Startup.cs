@@ -30,7 +30,12 @@ namespace UncannySoft.MvcAuthExample
             {
                 
             });
-            services.AddMvc();
+            services.AddMvc(config => {
+                var policy = new AuthorizationPolicyBuilder()
+                    .RequireAuthenticatedUser()
+                    .Build();
+                config.Filters.Add(new AuthorizeFilter(policy));
+            });
         }
         
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
