@@ -7,6 +7,9 @@ using Microsoft.AspNet.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNet.Http;
+using Microsoft.AspNet.Authorization;
+using Microsoft.AspNet.Mvc.Filters;
 
 namespace UncannySoft.MvcAuthExample
 {
@@ -23,6 +26,10 @@ namespace UncannySoft.MvcAuthExample
         
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthorization(options =>
+            {
+                
+            });
             services.AddMvc();
         }
         
@@ -32,6 +39,15 @@ namespace UncannySoft.MvcAuthExample
             app.UseDeveloperExceptionPage();
             app.UseIISPlatformHandler();
             app.UseStaticFiles();
+
+            app.UseCookieAuthentication(options =>
+            {
+                options.AuthenticationScheme = "Cookie";
+                options.LoginPath = new PathString("/Account/Unauthorized/");
+                options.AccessDeniedPath = new PathString("/Account/Forbidden/");
+                options.AutomaticAuthenticate = true;
+                options.AutomaticChallenge = true;
+            });
 
             app.UseMvcWithDefaultRoute();
         }

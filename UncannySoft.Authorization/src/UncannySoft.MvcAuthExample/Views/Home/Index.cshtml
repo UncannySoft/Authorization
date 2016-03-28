@@ -1,21 +1,4 @@
 ﻿@{
     ViewData["Title"] = "Home on the range!";
 }
-
-@if (User.Identity.IsAuthenticated)
-{
-    <div>Hello @User.Identity.Name!</div>
-    <div>
-        <dl>
-            @foreach (var claim in User.Claims)
-            {
-                <dt>@claim.Type</dt>
-                <dd>@claim.Value</dd>
-            }
-        </dl>
-    </div>
-}
-else
-{
-    <div>No user logged in.</div>
-}
+Welcome to the machine!
