@@ -13,5 +13,10 @@ namespace UncannySoft.MvcAuthExample.Controllers
 
         [Authorize(Policy = "AdministratorOnly")]
         public IActionResult Admin() => View();
+
+        [Authorize(Policy = "Over21Only")]
+        public IActionResult OverAge() => View();
+
+
     }
 }

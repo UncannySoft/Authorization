@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Mvc.Filters;
+using UncannySoft.Authorization.Requirement;
 
 namespace UncannySoft.MvcAuthExample
 {
@@ -31,6 +32,7 @@ namespace UncannySoft.MvcAuthExample
                 options.AddPolicy("AdministratorOnly", policy => policy.RequireRole("Administrator"));
                 options.AddPolicy("EmployeeIdExists", policy => policy.RequireClaim("EmployeeId"));
                 options.AddPolicy("EmployeeIdIn", policy => policy.RequireClaim("EmployeeId", "123", "456"));
+                options.AddPolicy("Over21Only", policy => policy.Requirements.Add(new MinimumAgeRequirement(21)));
             });
             services.AddMvc(config => {
                 var policy = new AuthorizationPolicyBuilder()

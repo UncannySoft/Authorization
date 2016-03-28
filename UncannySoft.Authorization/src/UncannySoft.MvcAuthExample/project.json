@@ -5,6 +5,7 @@
     },
 
     "dependencies": {
+        "UncannySoft.Authorization": "1.0.0",
         "Microsoft.AspNet.Authentication.Cookies": "1.0.0-rc1-final",
         "Microsoft.AspNet.Authentication.OpenIdConnect": "1.0.0-rc1-final",
         "Microsoft.AspNet.Authorization": "1.0.0-rc1-final",
